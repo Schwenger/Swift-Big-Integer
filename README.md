@@ -1,19 +1,13 @@
 # BInt and BDouble
-BInt and BDouble is a lightweight, and easy-to-use, arbitrary precision arithmetric library for Swift 3. It supports whole Numbers (BInt) and Fractions (BDouble) with most of the common math operators like addition, subtraction, multiplication, exponentiation, modulus and division. Some optimized math functions like factorial or gcd are also implemented. So more details, please continue reading.
+BInt and BDouble is a lightweight, and easy-to-use, arbitrary precision arithmetic library for Swift 3. It supports whole Numbers (BInt) and Fractions (BDouble) with most of the common math operators like addition, subtraction, multiplication, exponentiation, modulus and division. Some optimized math functions like factorial or gcd are also implemented. So more details, please continue reading.
 
 Some benchmarks are located in Benchmarks.swift, note that these are more than 10 times faster in release mode.
-
-
-
-## Installation
-Simply drag the SMP.swift file from the sources folder into your project!
-Yes, it's that easy :)
 
 ### Swift Package Manager
 
 You can use the [Swift Package Manager](https://swift.org/package-manager/) and specify the  package dependency in your `Package.swift` file by adding this:
-```
-.Package(url: "https://github.com/mkrd/Swift-Big-Integer.git", majorVersion: 1)
+```swift
+.Package(url: "https://github.com/schwenger/Swift-Big-Integer.git", from: "1.0.0")
 ```
 
 
@@ -71,7 +65,7 @@ BIntOrInt  *  BIntOrInt // Returns BInt
 BIntOrInt  *= BIntOrInt
 
 // Powering
-BInt       ^  Int       // Retuns BInt to the power of Int
+BInt       ^  Int       // Returns BInt to the power of Int
 
 // Modulo
 BIntOrInt  %  BIntOrInt // Returns BInt
@@ -161,7 +155,7 @@ bigD.description // Returns "-308/25"
 => print(bigD) // prints "-308/25"
 
 
-bigD.minimize() // Divides numerator and denominator by their gcd for storage and operation efficiency, usually not neccesary, because of automatic minimization
+bigD.minimize() // Divides numerator and denominator by their gcd for storage and operation efficiency, usually not necessary, because of automatic minimization
 
 big.rawData() // Returns internal structure
 ```
@@ -199,14 +193,8 @@ a <= b <==> !(a > b)
 
 
 ## About performance
-BInt about twice as fast as mini-gmp, as of now (not counting the normal gmp, because it needs to be installed and is not portable). For example, BInt can add numbers about 2 times faster than GMP (272ms vs 530ms for fib(100,000)), and multiply more than 2 times faster. When given the task of calculating and printing factorials successively, BInt performs significantly better than GMP. In addition, GMP is significantly harder to use, especially in combination with Swift, while BInt offers an intuitive interface.
+BInt about twice as fast as mini-gmp, as of now (not counting the normal GMP, because it needs to be installed and is not portable). For example, BInt can add numbers about 2 times faster than GMP (272ms vs 530ms for fib(100,000)), and multiply more than 2 times faster. When given the task of calculating and printing factorials successively, BInt performs significantly better than GMP. In addition, GMP is significantly harder to use, especially in combination with Swift, while BInt offers an intuitive interface.
 
 
-
-
-## Contributing
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+# About this fork
+This project was forked in order to comply to our needs. No further feature development is to be expected.
